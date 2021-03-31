@@ -5,6 +5,11 @@ const ctrl = require('../controllers');
 router.get('/', ctrl.example.index);
 router.get('/:id', ctrl.example.show);
 router.post('/', ctrl.example.create);
+
+/////////////// query ////////////////////
+router.post('/query', ctrl.example.query);
+//////////////////////////////////////////
+
 router.put('/:id', ctrl.example.update);
 router.delete('/:id', ctrl.example.destroy);
 
