@@ -1,13 +1,13 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
-const messageSchema = new Schema({
+const taskSchema = new Schema({
     content: {
         type: String,
         minLength: 1
     }
 });
 
-const Message = mongoose.model('Message', messageSchema);
+const Task = mongoose.model('Task', taskSchema);
 
-module.exports = Message;
+module.exports = Task;

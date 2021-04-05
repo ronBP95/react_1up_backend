@@ -18,4 +18,5 @@ module.exports = {
     User: require('./user'),
     Message: require('./message'),
     InstagramPost: require('./instagram'),
+    Task: require('./task')
 };

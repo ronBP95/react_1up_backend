@@ -19,14 +19,14 @@ app.use(passport.initialize());
 
 
 // API Routes
-app.get('/api/', (req, res) => {
-  res.json({ name: 'MERN Auth API', greeting: 'Welcome to the our API', author: 'YOU', message: "Smile, you are being watched by the Backend Engineering Team" });
+app.get('/', (req, res) => {
+  res.json("Main Index Get Route is Working!");
 });
 
-app.use('/api/examples', routes.example);
-app.use('/api/users', routes.user);
-app.use('/api/messages', routes.message);
-app.use('/api/instagram', routes.instagram);
+app.use('/examples', routes.example);
+app.use('/user', routes.user);
+app.use('/messages', routes.message);
+app.use('/instagram', routes.instagram);
 
 // Server
 const server = app.listen(PORT, () => console.log(`Server is running on PORT: ${PORT}`));

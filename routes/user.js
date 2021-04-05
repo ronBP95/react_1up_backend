@@ -7,6 +7,7 @@ router.post('/register', ctrl.user.register);
 router.post('/login', ctrl.user.login);
 router.get('/profile', passport.authenticate('jwt', { session: false }), ctrl.user.profile); // session: false ???
 router.get('/messages', passport.authenticate('jwt', { session: false }), ctrl.user.messages); // session: false ???
+router.get('/tasks', ctrl.task.index);
 
 
 module.exports = router;
