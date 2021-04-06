@@ -33,13 +33,17 @@ const destroy = async (req, res) => {
     const myProfile = await db.Task.findOne({ newTask: req._id })
     const id = myProfile._id
 
-    db.Task.findByIdAndDelete(id, (err, deleteTask) => {
+    db.Task.remove({}, (err, deleteTask) => {
         if (err) {
             console.log('Error with Destroy route for task', err);
         } else {
             res.json(deleteTask)
         }
     });
+
+    db.Task.create({
+        "task": "Add Some Tasks!"
+    })
 };
 
 module.exports = {
